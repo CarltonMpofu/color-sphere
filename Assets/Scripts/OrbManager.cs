@@ -14,6 +14,9 @@ public class OrbManager : MonoBehaviour
     [SerializeField] float respawnTimer = 0f;
     [SerializeField] float respawnDelay = 2f; // Delay between orb spawns
 
+    [SerializeField] Transform xPos;
+    [SerializeField] Transform yPos;
+
     void Start()
     {
         // Spawn initial orbs
@@ -46,7 +49,8 @@ public class OrbManager : MonoBehaviour
     void SpawnOrb()
     {
         // Get random position and color
-        Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(1f, 5f), Random.Range(-10f, 10f));
+        Vector3 spawnPosition = new Vector3(Random.Range(-xPos.position.x, xPos.position.x), 
+            Random.Range(-yPos.position.y, yPos.position.y));
         Color randomColor = orbColors[Random.Range(0, orbColors.Length)];
 
         // Create orb object
