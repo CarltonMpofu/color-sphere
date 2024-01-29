@@ -179,7 +179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &496149340
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -759,6 +759,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 486989307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1149686240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149686241}
+  - component: {fileID: 1149686242}
+  m_Layer: 0
+  m_Name: Orb Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1149686241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149686240}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1149686242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149686240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad48e9e3afda4f54b844299db7742618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbPrefab: {fileID: 5661344119081458268, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
+  maxOrbs: 5
+  orbColors:
+  - {r: 0, g: 0.5384617, b: 1, a: 1}
+  - {r: 0.6994517, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.532876, b: 0, a: 1}
+  - {r: 0.09620404, g: 1, b: 0, a: 1}
+  - {r: 0.7386131, g: 0, b: 1, a: 1}
+  respawnTimer: 0
+  respawnDelay: 2
 --- !u!1 &1258879001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,12 +1107,12 @@ GameObject:
   - component: {fileID: 1710698220}
   - component: {fileID: 1710698219}
   m_Layer: 0
-  m_Name: platformPack_tile012
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1710698219
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1219,3 +1273,4 @@ SceneRoots:
   - {fileID: 1501909356}
   - {fileID: 496149341}
   - {fileID: 1710698220}
+  - {fileID: 1149686241}
