@@ -1,10 +1,12 @@
 using UnityEngine;
+using TMPro;
 
 public class OrbManager : MonoBehaviour
 {
     // Orb properties
     [SerializeField] GameObject orbPrefab;
     [SerializeField] int maxOrbs = 5;
+    [SerializeField] int orbsToAdd = 5;
     [SerializeField] Color[] orbColors; // Array of possible orb colors
 
     // Collected orbs count
@@ -12,10 +14,12 @@ public class OrbManager : MonoBehaviour
 
     // Spawning variables
     [SerializeField] float respawnTimer = 0f;
-    [SerializeField] float respawnDelay = 2f; // Delay between orb spawns
+    [SerializeField] float respawnDelay = 3f; // Delay between orb spawns
 
     [SerializeField] Transform xPos;
     [SerializeField] Transform yPos;
+
+    [SerializeField] TextMeshProUGUI orbCountsText;
 
     void Start()
     {
@@ -24,6 +28,8 @@ public class OrbManager : MonoBehaviour
         {
             SpawnOrb();
         }
+
+        orbCountsText.text = GameObject.FindGameObjectsWithTag("Orb").Length.ToString();
     }
 
     void Update()
@@ -41,9 +47,11 @@ public class OrbManager : MonoBehaviour
         // Increase max orbs on collecting 10 orbs
         if (collectedOrbs >= 10)
         {
-            maxOrbs += 2;
+            maxOrbs += orbsToAdd;
             collectedOrbs -= 10; // Reset counter
         }
+
+        orbCountsText.text = GameObject.FindGameObjectsWithTag("Orb").Length.ToString();
     }
 
     void SpawnOrb()
