@@ -19,6 +19,8 @@ public class OrbManager : MonoBehaviour
     [SerializeField] Transform xPos;
     [SerializeField] Transform yPos;
 
+    [SerializeField] Transform orbsParent;
+
     [SerializeField] TextMeshProUGUI orbCountsText;
 
     void Start()
@@ -64,6 +66,7 @@ public class OrbManager : MonoBehaviour
         // Create orb object
         GameObject newOrb = Instantiate(orbPrefab, spawnPosition, Quaternion.identity);
         newOrb.tag = "Orb";
+        newOrb.transform.parent = orbsParent;
 
         // Set orb color
         newOrb.GetComponent<Renderer>().material.color = randomColor;
