@@ -7,7 +7,9 @@ public class OrbManager : MonoBehaviour
     [SerializeField] GameObject orbPrefab;
     [SerializeField] int maxOrbs = 5;
     [SerializeField] int orbsToAdd = 5;
-    [SerializeField] Color[] orbColors; // Array of possible orb colors
+    
+    [SerializeField] OrbColorSO[] orbColors;
+
 
     // Collected orbs count
     private int collectedOrbs = 0;
@@ -18,6 +20,7 @@ public class OrbManager : MonoBehaviour
 
     [SerializeField] Transform xPos;
     [SerializeField] Transform yPos;
+    [SerializeField] float orbOffset = 0.5f;
 
     [SerializeField] Transform orbsParent;
 
@@ -59,9 +62,11 @@ public class OrbManager : MonoBehaviour
     void SpawnOrb()
     {
         // Get random position and color
-        Vector3 spawnPosition = new Vector3(Random.Range(-xPos.position.x, xPos.position.x), 
-            Random.Range(-yPos.position.y, yPos.position.y));
-        Color randomColor = orbColors[Random.Range(0, orbColors.Length)];
+        Vector3 spawnPosition = new Vector3(Random.Range(-xPos.position.x + orbOffset, xPos.position.x - orbOffset), 
+            Random.Range(-yPos.position.y + orbOffset, yPos.position.y - orbOffset));
+
+        OrbColorSO orbColorSO = orbColors[Random.Range(0, orbColors.Length)];  
+        Color randomColor = orbColorSO.GetColor();
 
         // Create orb object
         GameObject newOrb = Instantiate(orbPrefab, spawnPosition, Quaternion.identity);

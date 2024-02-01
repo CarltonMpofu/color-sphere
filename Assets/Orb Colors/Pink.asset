@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddc5a637625b7549a752b90b975b869, type: 3}
   m_Name: Pink
   m_EditorClassIdentifier: 
-  colorID: 8
+  colorID: 7
   orbColor: {r: 1, g: 0.078431375, b: 0.5764706, a: 1}
   colorName: 

@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Orb Color", fileName = "New Orb Color")]
-public class ColorSO : ScriptableObject
+public class OrbColorSO : ScriptableObject
 {
     [SerializeField] int colorID;
     [SerializeField] Color orbColor;

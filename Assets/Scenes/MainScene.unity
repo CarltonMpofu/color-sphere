@@ -224,6 +224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orb
       objectReference: {fileID: 0}
+    - target: {fileID: 5661344119081458268, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6697276373823170345, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.42
@@ -1035,6 +1039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5661344119081458268, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6697276373823170345, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.21
@@ -1377,11 +1385,16 @@ MonoBehaviour:
   maxOrbs: 10
   orbsToAdd: 5
   orbColors:
-  - {r: 0, g: 0.5384617, b: 1, a: 1}
-  - {r: 0.6994517, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0.532876, b: 0, a: 1}
-  - {r: 0.09620404, g: 1, b: 0, a: 1}
-  - {r: 0.7386131, g: 0, b: 1, a: 1}
+  - {fileID: 11400000, guid: 27f3dbdea5b6c3e4ca93693aa3d837c0, type: 2}
+  - {fileID: 11400000, guid: 6febbb6eb248eb84191f0c185056cdce, type: 2}
+  - {fileID: 11400000, guid: a96b50d9935de9c4bacd507cd636371e, type: 2}
+  - {fileID: 11400000, guid: 234dbebe29a369b4e9402ae557594a07, type: 2}
+  - {fileID: 11400000, guid: 223cfd2ad0c067949b73355f4ad5e58a, type: 2}
+  - {fileID: 11400000, guid: 17ff3dec9035b3d46b57ec5900cfb4ad, type: 2}
+  - {fileID: 11400000, guid: 71e01794e9291f440a1bc59ed038316c, type: 2}
+  - {fileID: 11400000, guid: 10402c08117981d46ba73511f2811b37, type: 2}
+  - {fileID: 11400000, guid: 536f62cae2828424ba4f0ab5dd8eaf09, type: 2}
+  - {fileID: 11400000, guid: a15155e2ba407284c9231e319d86f4c9, type: 2}
   respawnTimer: 0
   respawnDelay: 2
   xPos: {fileID: 1922007098}

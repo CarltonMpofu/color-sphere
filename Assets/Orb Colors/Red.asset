@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddc5a637625b7549a752b90b975b869, type: 3}
   m_Name: Red
   m_EditorClassIdentifier: 
-  colorID: 10
+  colorID: 9
   orbColor: {r: 1, g: 0, b: 0.074260235, a: 1}
   colorName: 
