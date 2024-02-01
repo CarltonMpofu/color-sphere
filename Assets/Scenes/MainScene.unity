@@ -1399,6 +1399,7 @@ MonoBehaviour:
   respawnDelay: 2
   xPos: {fileID: 1922007098}
   yPos: {fileID: 18162956}
+  orbOffset: 0.6
   orbsParent: {fileID: 998253631}
   orbCountsText: {fileID: 1010072608}
 --- !u!1 &1185256550

@@ -4,27 +4,30 @@ using TMPro;
 public class OrbManager : MonoBehaviour
 {
     // Orb properties
+    [Header("Orb Properties")]
     [SerializeField] GameObject orbPrefab;
     [SerializeField] int maxOrbs = 5;
     [SerializeField] int orbsToAdd = 5;
     
     [SerializeField] OrbColorSO[] orbColors;
 
-
-    // Collected orbs count
-    private int collectedOrbs = 0;
-
     // Spawning variables
+    [Header("Spawning Variables")]
     [SerializeField] float respawnTimer = 0f;
     [SerializeField] float respawnDelay = 3f; // Delay between orb spawns
-
-    [SerializeField] Transform xPos;
-    [SerializeField] Transform yPos;
-    [SerializeField] float orbOffset = 0.5f;
-
     [SerializeField] Transform orbsParent;
 
+
+    [Header("Boundaries")]
+    [SerializeField] Transform xPos;
+    [SerializeField] Transform yPos;
+    [SerializeField] float boundaryOffset = 0.5f;
+
+
     [SerializeField] TextMeshProUGUI orbCountsText;
+
+        // Collected orbs count
+    int collectedOrbs = 0;
 
     void Start()
     {
@@ -62,8 +65,8 @@ public class OrbManager : MonoBehaviour
     void SpawnOrb()
     {
         // Get random position and color
-        Vector3 spawnPosition = new Vector3(Random.Range(-xPos.position.x + orbOffset, xPos.position.x - orbOffset), 
-            Random.Range(-yPos.position.y + orbOffset, yPos.position.y - orbOffset));
+        Vector3 spawnPosition = new Vector3(Random.Range(-xPos.position.x + boundaryOffset, xPos.position.x - boundaryOffset), 
+            Random.Range(-yPos.position.y + boundaryOffset, yPos.position.y - boundaryOffset));
 
         OrbColorSO orbColorSO = orbColors[Random.Range(0, orbColors.Length)];  
         Color randomColor = orbColorSO.GetColor();
