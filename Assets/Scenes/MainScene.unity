@@ -1088,6 +1088,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
+--- !u!1 &860873205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860873206}
+  - component: {fileID: 860873207}
+  m_Layer: 0
+  m_Name: GamePlay Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860873206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860873205}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860873207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860873205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c88ebf53f40db4682b6309e89f7212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbParent: {fileID: 998253630}
 --- !u!1 &998253630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad48e9e3afda4f54b844299db7742618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbPrefab: {fileID: 5661344119081458268, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
+  orbPrefab: {fileID: -1628032184046266487, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
   maxOrbs: 10
   orbsToAdd: 5
   orbColors:
@@ -1397,10 +1442,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a15155e2ba407284c9231e319d86f4c9, type: 2}
   respawnTimer: 0
   respawnDelay: 2
+  orbsParent: {fileID: 998253631}
   xPos: {fileID: 1922007098}
   yPos: {fileID: 18162956}
-  orbOffset: 0.6
-  orbsParent: {fileID: 998253631}
+  boundaryOffset: 0.5
   orbCountsText: {fileID: 1010072608}
 --- !u!1 &1185256550
 GameObject:
@@ -2335,3 +2380,4 @@ SceneRoots:
   - {fileID: 998253631}
   - {fileID: 280650056}
   - {fileID: 780905583}
+  - {fileID: 860873206}
