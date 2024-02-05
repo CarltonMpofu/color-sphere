@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10;
 
     OrbManager orbManager;
+    GamePlay gamePlay;
 
     float vInput, hInput;
 
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         orbManager = FindAnyObjectByType<OrbManager>();
+
+        gamePlay = FindObjectOfType<GamePlay>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour
         {
             Destroy(other.gameObject);
             orbManager.IncreaseCollectedOrbs();
+            gamePlay.SetPlayerTargetColor();
         }
     }
 }

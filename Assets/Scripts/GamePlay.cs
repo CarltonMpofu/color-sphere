@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GamePlayManager : MonoBehaviour
+public class GamePlay : MonoBehaviour
 {
     [SerializeField] GameObject orbParent;
 
@@ -27,7 +27,7 @@ public class GamePlayManager : MonoBehaviour
         
     }
 
-    void SetPlayerTargetColor()
+    public void SetPlayerTargetColor()
     {
         Orb[] orbs = orbParent.GetComponentsInChildren<Orb>();
         
