@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -39,9 +41,18 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Orb"))
         {
-            Destroy(other.gameObject);
-            orbManager.IncreaseCollectedOrbs();
-            gamePlay.SetPlayerTargetColor();
+            Orb currentOrb = other.gameObject.GetComponent<Orb>();
+            if(currentOrb.GetOrbColorID() == gamePlay.GetPlayerTargetID())
+            {
+                Destroy(other.gameObject);
+                orbManager.IncreaseCollectedOrbs();
+                gamePlay.SetPlayerTargetColor();
+            }
+            else
+            { // Got to game over scene
+                SceneManager.LoadScene("GameOverScene");
+            }
+            
         }
     }
 }

@@ -10,6 +10,8 @@ public class GamePlay : MonoBehaviour
 
     Player player;
 
+    int playerTargetID;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +34,17 @@ public class GamePlay : MonoBehaviour
         Orb[] orbs = orbParent.GetComponentsInChildren<Orb>();
         
         Orb targetOrb = orbs[Random.Range(0, orbs.Length)];
+        playerTargetID = targetOrb.GetOrbColorID();
 
-        Color getTargetColor = orbManager.FindOrbColor(targetOrb.GetOrbColorID());
+        Color getTargetColor = orbManager.FindOrbColor(playerTargetID);
 
         player.GetComponent<SpriteRenderer>().color = getTargetColor;
+        
+    }
+
+    public int GetPlayerTargetID()
+    {
+        return playerTargetID;
     }
 
     
