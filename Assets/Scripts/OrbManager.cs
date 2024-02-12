@@ -31,9 +31,11 @@ public class OrbManager : MonoBehaviour
 
     bool initialOrbsSpawned = false;
 
+    Player player;
+
     void Start()
     {
-        
+        player = FindAnyObjectByType<Player>();
     }
 
     void Update()
@@ -54,7 +56,8 @@ public class OrbManager : MonoBehaviour
             if (collectedOrbs >= 10)
             {
                 maxOrbs += orbsToAdd;
-                collectedOrbs -= 10; // Reset counter
+                player.UpdatePlayerSpeed();
+                collectedOrbs = 0; // Reset counter
             }
         }
         orbCountsText.text = GameObject.FindGameObjectsWithTag("Orb").Length.ToString();

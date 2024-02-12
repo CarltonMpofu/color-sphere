@@ -29,6 +29,11 @@ public class Player : MonoBehaviour
         
     }
 
+    public void UpdatePlayerSpeed()
+    {
+        moveSpeed += 0.005f;
+    }
+
     private void FixedUpdate() 
     {
         hInput = joystick.Horizontal * moveSpeed;
