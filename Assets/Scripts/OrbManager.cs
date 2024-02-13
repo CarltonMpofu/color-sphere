@@ -25,9 +25,12 @@ public class OrbManager : MonoBehaviour
 
 
     [SerializeField] TextMeshProUGUI orbCountsText;
+    [SerializeField] TextMeshProUGUI scoreText;
 
     // Collected orbs count
     int collectedOrbs = 0;
+
+    int score = 0;
 
     bool initialOrbsSpawned = false;
 
@@ -94,6 +97,8 @@ public class OrbManager : MonoBehaviour
     public void IncreaseCollectedOrbs()
     {
         collectedOrbs++;
+        score++;
+        scoreText.text = score.ToString();
     }
 
     public Color FindOrbColor(int orbId)
