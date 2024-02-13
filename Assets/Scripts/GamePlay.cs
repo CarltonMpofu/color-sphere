@@ -39,6 +39,7 @@ public class GamePlay : MonoBehaviour
         Color getTargetColor = orbManager.FindOrbColor(playerTargetID);
 
         player.GetComponent<SpriteRenderer>().color = getTargetColor; 
+        player.GetComponent<TrailRenderer>().startColor = getTargetColor;
         
     }
 
