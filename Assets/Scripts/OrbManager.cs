@@ -35,35 +35,40 @@ public class OrbManager : MonoBehaviour
     bool initialOrbsSpawned = false;
 
     Player player;
+    GamePlay gamePlay;
 
     void Start()
     {
-        player = FindAnyObjectByType<Player>();
+        player = FindObjectOfType<Player>();
+        gamePlay = FindObjectOfType<GamePlay>();
     }
 
     void Update()
     {
-        if(initialOrbsSpawned)
+        if(gamePlay.PlayGame())
         {
-            // Update respawn timer
-            respawnTimer += Time.deltaTime;
-
-            // Check if we can spawn a new orb
-            if (respawnTimer >= respawnDelay && GameObject.FindGameObjectsWithTag("Orb").Length < maxOrbs)
+            if(initialOrbsSpawned)
             {
-                SpawnOrb();
-                respawnTimer = 0f;
-            }
+                // Update respawn timer
+                respawnTimer += Time.deltaTime;
 
-            // Increase max orbs on collecting 10 orbs
-            if (collectedOrbs >= 10)
-            {
-                maxOrbs += orbsToAdd;
-                player.UpdatePlayerSpeed();
-                collectedOrbs = 0; // Reset counter
+                // Check if we can spawn a new orb
+                if (respawnTimer >= respawnDelay && GameObject.FindGameObjectsWithTag("Orb").Length < maxOrbs)
+                {
+                    SpawnOrb();
+                    respawnTimer = 0f;
+                }
+
+                // Increase max orbs on collecting 10 orbs
+                if (collectedOrbs >= 10)
+                {
+                    maxOrbs += orbsToAdd;
+                    player.UpdatePlayerSpeed();
+                    collectedOrbs = 0; // Reset counter
+                }
             }
+            orbCountsText.text = GameObject.FindGameObjectsWithTag("Orb").Length.ToString();
         }
-        orbCountsText.text = GameObject.FindGameObjectsWithTag("Orb").Length.ToString();
     }
 
     public void SpawnInitialOrbs()

@@ -29,6 +29,16 @@ public class Player : MonoBehaviour
         
     }
 
+    public void HideJoyStick()
+    {
+        joystick.enabled = false;
+    }
+
+    public void ShowJoyStick()
+    {
+        joystick.enabled = true;
+    }
+
     public void UpdatePlayerSpeed()
     {
         moveSpeed += 0.005f;
@@ -49,6 +59,7 @@ public class Player : MonoBehaviour
             Orb currentOrb = other.gameObject.GetComponent<Orb>();
             if(currentOrb.GetOrbColorID() == gamePlay.GetPlayerTargetID())
             {
+                currentOrb.PlayParticle();
                 Destroy(other.gameObject);
                 orbManager.IncreaseCollectedOrbs();
                 gamePlay.SetPlayerTargetColor();

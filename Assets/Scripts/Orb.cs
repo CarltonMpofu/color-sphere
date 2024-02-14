@@ -5,6 +5,8 @@ using UnityEngine;
 public class Orb : MonoBehaviour
 {
     OrbColorSO orbColorSO;
+    
+    [SerializeField] ParticleSystem ps;
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +30,13 @@ public class Orb : MonoBehaviour
     public int GetOrbColorID()
     {
         return orbColorSO.GetColorID();
+    }
+
+    public void PlayParticle()
+    {
+        ParticleSystem newPs = Instantiate(ps, transform.position, Quaternion.identity);
+        ParticleSystem.MainModule ma = newPs.main;
+        ma.startColor = orbColorSO.GetColor();
+        newPs.Play();
     }
 }

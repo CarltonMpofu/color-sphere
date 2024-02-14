@@ -12,20 +12,51 @@ public class GamePlay : MonoBehaviour
 
     int playerTargetID;
 
+    bool playGame = false;
+    private void Awake() 
+    {
+        playGame = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        orbManager = FindAnyObjectByType<OrbManager>();
-        player = FindAnyObjectByType<Player>();
+        
+        orbManager = FindObjectOfType<OrbManager>();
+        player = FindObjectOfType<Player>();
 
         orbManager.SpawnInitialOrbs();
 
         SetPlayerTargetColor();
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public bool PlayGame()
+    {
+        return playGame;
+    }
+
+    public void PauseOrUnpauseGame()
+    {
+        player = FindObjectOfType<Player>();
+
+        if(playGame)
+        { // Pause Game
+            playGame = false;
+            player.HideJoyStick();
+        }
+        else
+        { // Play game
+            playGame = true;
+            player.ShowJoyStick();
+        }
         
     }
 
