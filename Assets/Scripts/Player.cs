@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +11,8 @@ public class Player : MonoBehaviour
     GamePlay gamePlay;
 
     SoundManager soundManager;
+
+    GameManager gameManager;
 
     float vInput, hInput;
 
@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
         gamePlay = FindObjectOfType<GamePlay>();
 
         soundManager = FindObjectOfType<SoundManager>();
+
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -71,7 +73,7 @@ public class Player : MonoBehaviour
             }
             else
             { // Got to game over scene
-                SceneManager.LoadScene("GameOverScene");
+                gameManager.ShowGameOverCanvas();
             }
             
         }
