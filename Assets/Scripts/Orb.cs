@@ -35,6 +35,7 @@ public class Orb : MonoBehaviour
     public void PlayParticle()
     {
         ParticleSystem newPs = Instantiate(ps, transform.position, Quaternion.identity);
+        Destroy(newPs.gameObject, 2f);
         ParticleSystem.MainModule ma = newPs.main;
         ma.startColor = orbColorSO.GetColor();
         newPs.Play();
