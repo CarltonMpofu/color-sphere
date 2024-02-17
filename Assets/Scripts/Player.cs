@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     OrbManager orbManager;
     GamePlay gamePlay;
 
+    SoundManager soundManager;
+
     float vInput, hInput;
 
 
@@ -21,6 +23,8 @@ public class Player : MonoBehaviour
         orbManager = FindAnyObjectByType<OrbManager>();
 
         gamePlay = FindObjectOfType<GamePlay>();
+
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -59,6 +63,7 @@ public class Player : MonoBehaviour
             Orb currentOrb = other.gameObject.GetComponent<Orb>();
             if(currentOrb.GetOrbColorID() == gamePlay.GetPlayerTargetID())
             {
+                soundManager.PlaySound();
                 currentOrb.PlayParticle();
                 Destroy(other.gameObject);
                 orbManager.IncreaseCollectedOrbs();
