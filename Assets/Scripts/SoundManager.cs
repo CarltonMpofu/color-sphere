@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class SoundManager : MonoBehaviour
     bool soundOn;
 
     AudioSource audioSource;
+
+    [SerializeField] Image soundButtonImage;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,15 @@ public class SoundManager : MonoBehaviour
 
     public void ToggleSound()
     {
-        soundOn = !soundOn;
+        if(soundOn)
+        {
+            soundOn = false;
+            soundButtonImage.color = Color.red;
+        }
+        else
+        {
+            soundOn = true;
+            soundButtonImage.color = Color.white;
+        }
     }
 }

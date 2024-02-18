@@ -53,8 +53,6 @@ public class GamePlay : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         gameManager = FindObjectOfType<GameManager>();
-        Debug.Log("Pressed");
-        Debug.Log(playGame);
 
         if(playGame)
         { // Pause Game

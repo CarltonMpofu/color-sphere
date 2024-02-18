@@ -3173,6 +3173,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2427297475981370157, guid: e72f74b1a823ced48b23118ef2f97405, type: 3}
+      propertyPath: soundButtonImage
+      value: 
+      objectReference: {fileID: 450367692}
     - target: {fileID: 2939012022793300081, guid: e72f74b1a823ced48b23118ef2f97405, type: 3}
       propertyPath: m_Name
       value: Sound Manager
@@ -3250,6 +3254,10 @@ PrefabInstance:
       propertyPath: playerJoystick
       value: 
       objectReference: {fileID: 791794529}
+    - target: {fileID: 6960265354328308985, guid: b7930a70d82b6ca4bae09b6b2c89a52b, type: 3}
+      propertyPath: pauseButtonImage
+      value: 
+      objectReference: {fileID: 1278710669}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

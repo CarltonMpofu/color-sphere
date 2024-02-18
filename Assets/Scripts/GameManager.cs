@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject playerJoystick;
 
+    [SerializeField] Image pauseButtonImage;
+    [SerializeField] Image soundButtonImage;
+
     OrbManager orbManager;
 
     // Start is called before the first frame update
@@ -22,6 +26,7 @@ public class GameManager : MonoBehaviour
         gameOverCanvas.gameObject.SetActive(false);
 
         orbManager = FindObjectOfType<OrbManager>();
+
     }
 
     public void ShowGameOverCanvas()
@@ -38,11 +43,13 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         playerJoystick.SetActive(false);
+        pauseButtonImage.color = Color.red;
     }
 
     public void UnPauseGame()
     {
         playerJoystick.SetActive(true);
+        pauseButtonImage.color = Color.white;
     }
 
     public void PlayAgain()
