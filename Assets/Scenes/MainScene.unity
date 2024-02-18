@@ -1323,7 +1323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.000015259, y: -14.3}
+  m_AnchoredPosition: {x: -0.000015258789, y: -14.299999}
   m_SizeDelta: {x: 201.94, y: 116.05}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &803243577
@@ -2454,6 +2454,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 486989307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384887361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8867412574120128325, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
+  m_PrefabInstance: {fileID: 1439601492}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1439601492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2543,175 +2554,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 893572598196040660, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 893572598196040660, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 893572598196040660, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1273377161}
-    - target: {fileID: 893572598196040660, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 893572598196040660, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayAgain
-      objectReference: {fileID: 0}
-    - target: {fileID: 893572598196040660, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 893572598196040660, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034620944918491695, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034620944918491695, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034620944918491695, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1920.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034620944918491695, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 140.46002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034620944918491695, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.015076
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034620944918491695, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -469.768
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009095745477411606, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009095745477411606, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009095745477411606, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1920.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009095745477411606, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 256.62903
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009095745477411606, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.010078
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009095745477411606, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -238.51776
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949251277697728736, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontSize
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949251277697728736, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 872da10b03a6dbc47a9bb4c9eb7d752d, type: 2}
-    - target: {fileID: 4949251277697728736, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949251277697728736, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -8983540089902316494, guid: 872da10b03a6dbc47a9bb4c9eb7d752d, type: 2}
-    - target: {fileID: 4949251277697728736, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7168203494045687632, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
       propertyPath: m_Name
       value: Game Over Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 7168203494045687632, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7846774012997482331, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontSize
-      value: 76.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 7846774012997482331, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 872da10b03a6dbc47a9bb4c9eb7d752d, type: 2}
-    - target: {fileID: 7846774012997482331, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7846774012997482331, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_wordSpacing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7846774012997482331, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 76.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 7846774012997482331, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -8983540089902316494, guid: 872da10b03a6dbc47a9bb4c9eb7d752d, type: 2}
-    - target: {fileID: 7846774012997482331, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_characterSpacing
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7846774012997482331, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8208080659559335575, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 582.228
-      objectReference: {fileID: 0}
-    - target: {fileID: 8208080659559335575, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 179.728
-      objectReference: {fileID: 0}
-    - target: {fileID: 8208080659559335575, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -4.192
-      objectReference: {fileID: 0}
-    - target: {fileID: 8208080659559335575, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -177.38416
-      objectReference: {fileID: 0}
-    - target: {fileID: 8867412574120128325, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8867412574120128325, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 872da10b03a6dbc47a9bb4c9eb7d752d, type: 2}
-    - target: {fileID: 8867412574120128325, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8867412574120128325, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -8983540089902316494, guid: 872da10b03a6dbc47a9bb4c9eb7d752d, type: 2}
-    - target: {fileID: 8867412574120128325, guid: aaf3f3b16713e864c8574d3c6fd17cd2, type: 3}
-      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3658,6 +3509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6960265354328308985, guid: b7930a70d82b6ca4bae09b6b2c89a52b, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1384887361}
     - target: {fileID: 6960265354328308985, guid: b7930a70d82b6ca4bae09b6b2c89a52b, type: 3}
       propertyPath: gameCanvas
       value: 

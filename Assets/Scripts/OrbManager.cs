@@ -118,4 +118,9 @@ public class OrbManager : MonoBehaviour
 
         return Color.white;
     }
+
+    public int GetScore()
+    {
+        return score;
+    }
 }
