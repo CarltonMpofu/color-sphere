@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI scoreText;
 
+    [SerializeField] GameObject playerJoystick;
+
     OrbManager orbManager;
 
     // Start is called before the first frame update
@@ -31,6 +33,16 @@ public class GameManager : MonoBehaviour
         gameOverCanvas.gameObject.SetActive(true);
 
         scoreText.text = $"Score: {orbManager.GetScore()}";
+    }
+
+    public void PauseGame()
+    {
+        playerJoystick.SetActive(false);
+    }
+
+    public void UnPauseGame()
+    {
+        playerJoystick.SetActive(true);
     }
 
     public void PlayAgain()

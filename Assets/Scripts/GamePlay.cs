@@ -10,9 +10,11 @@ public class GamePlay : MonoBehaviour
 
     Player player;
 
+    GameManager gameManager;
+
     int playerTargetID;
 
-    bool playGame = false;
+    bool playGame = true;
     private void Awake() 
     {
         playGame = true;
@@ -21,9 +23,13 @@ public class GamePlay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         orbManager = FindObjectOfType<OrbManager>();
         player = FindObjectOfType<Player>();
+        gameManager = FindObjectOfType<GameManager>();
+        if(!gameManager)
+        {
+            Debug.LogError("NO GAME MANAGER");
+        }
 
         orbManager.SpawnInitialOrbs();
 
@@ -46,16 +52,22 @@ public class GamePlay : MonoBehaviour
     public void PauseOrUnpauseGame()
     {
         player = FindObjectOfType<Player>();
+        gameManager = FindObjectOfType<GameManager>();
+        Debug.Log("Pressed");
+        Debug.Log(playGame);
 
         if(playGame)
         { // Pause Game
             playGame = false;
-            player.HideJoyStick();
+            
+            gameManager.PauseGame();
+            // player.HideJoyStick();
         }
         else
         { // Play game
             playGame = true;
-            player.ShowJoyStick();
+            // player.ShowJoyStick();
+            gameManager.UnPauseGame();
         }
         
     }

@@ -65,9 +65,11 @@ public class Player : MonoBehaviour
             Orb currentOrb = other.gameObject.GetComponent<Orb>();
             if(currentOrb.GetOrbColorID() == gamePlay.GetPlayerTargetID())
             {
+                other.gameObject.SetActive(false);
+                Destroy(other.gameObject);
                 soundManager.PlaySound();
                 currentOrb.PlayParticle();
-                Destroy(other.gameObject);
+                
                 orbManager.IncreaseCollectedOrbs();
                 gamePlay.SetPlayerTargetColor();
             }
