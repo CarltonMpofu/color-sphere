@@ -27,6 +27,8 @@ public class OrbManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI orbCountsText;
     [SerializeField] TextMeshProUGUI scoreText;
 
+    [SerializeField] ParticleSystem magicParticle;
+
     // Collected orbs count
     int collectedOrbs = 0;
 
@@ -62,6 +64,7 @@ public class OrbManager : MonoBehaviour
                 // Increase max orbs on collecting 10 orbs
                 if (collectedOrbs >= 10)
                 {
+                    PlayParticle();
                     maxOrbs += orbsToAdd;
                     player.UpdatePlayerSpeed();
                     collectedOrbs = 0; // Reset counter
@@ -69,6 +72,13 @@ public class OrbManager : MonoBehaviour
             }
             orbCountsText.text = GameObject.FindGameObjectsWithTag("Orb").Length.ToString();
         }
+    }
+
+    void PlayParticle()
+    {
+        ParticleSystem newPs = Instantiate(magicParticle, player.transform.position, Quaternion.identity);
+        newPs.Play();
+        Destroy(newPs.gameObject, 2f);
     }
 
     public void SpawnInitialOrbs()

@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject playerJoystick;
 
     [SerializeField] Image pauseButtonImage;
-    [SerializeField] Image soundButtonImage;
+
 
     OrbManager orbManager;
 

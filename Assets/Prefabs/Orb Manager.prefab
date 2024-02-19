@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7281088009892827702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6723631225407652957}
+  - component: {fileID: 6800438085747850928}
+  m_Layer: 0
+  m_Name: Orb Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6723631225407652957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7281088009892827702}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6800438085747850928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7281088009892827702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad48e9e3afda4f54b844299db7742618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbPrefab: {fileID: -1628032184046266487, guid: 549fccaf83d3eaf459e99419076501ca, type: 3}
+  maxOrbs: 10
+  orbsToAdd: 5
+  orbColors:
+  - {fileID: 11400000, guid: 27f3dbdea5b6c3e4ca93693aa3d837c0, type: 2}
+  - {fileID: 11400000, guid: 6febbb6eb248eb84191f0c185056cdce, type: 2}
+  - {fileID: 11400000, guid: a96b50d9935de9c4bacd507cd636371e, type: 2}
+  - {fileID: 11400000, guid: 234dbebe29a369b4e9402ae557594a07, type: 2}
+  - {fileID: 11400000, guid: 223cfd2ad0c067949b73355f4ad5e58a, type: 2}
+  - {fileID: 11400000, guid: 17ff3dec9035b3d46b57ec5900cfb4ad, type: 2}
+  - {fileID: 11400000, guid: 71e01794e9291f440a1bc59ed038316c, type: 2}
+  - {fileID: 11400000, guid: 10402c08117981d46ba73511f2811b37, type: 2}
+  - {fileID: 11400000, guid: 536f62cae2828424ba4f0ab5dd8eaf09, type: 2}
+  - {fileID: 11400000, guid: a15155e2ba407284c9231e319d86f4c9, type: 2}
+  respawnTimer: 0
+  respawnDelay: 2
+  orbsParent: {fileID: 0}
+  xPos: {fileID: 0}
+  yPos: {fileID: 0}
+  boundaryOffset: 0.5
+  orbCountsText: {fileID: 0}
+  scoreText: {fileID: 0}
