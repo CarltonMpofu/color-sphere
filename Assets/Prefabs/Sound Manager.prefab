@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1788553462556083240}
   - component: {fileID: 461540681404135824}
   - component: {fileID: 7320696736286313594}
-  - component: {fileID: 2427297475981370157}
   m_Layer: 0
   m_Name: Sound Manager
   m_TagString: Untagged
@@ -46,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3743469b702415f4689c227fe718cdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundButtonImage: {fileID: 0}
 --- !u!82 &7320696736286313594
 AudioSource:
   m_ObjectHideFlags: 0
@@ -142,15 +142,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2427297475981370157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939012022793300081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3743469b702415f4689c227fe718cdc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
