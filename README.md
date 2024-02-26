@@ -6,7 +6,7 @@ ColorSphere is a visually stunning 2D adventure where players control a color-sh
 - <a href="https://carltonmpofu.itch.io/color-sphere" title="play game">Play Game (itch.io)</a></br>
 
 
-- [<img src="https://iconape.com/wp-content/files/nf/352932/png/amazon-app-store-logo.png" width="120"/>](https://github.com/)
+[<img src="https://iconape.com/wp-content/files/nf/352932/png/amazon-app-store-logo.png" width="120"/>](https://github.com/)
 
 ## Screenshots
 | Images | Images |
